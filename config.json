@@ -1,0 +1,57 @@
+{
+  "_comment": "Positions are [row, col]. Row 0 is the NORTH edge, column 0 is the WEST edge.",
+  "seed": 42,
+  "grid_size": [10, 10],
+  "start_pos": [0, 0],
+  "max_steps": 200,
+
+  "battery": {
+    "capacity": 100,
+    "costs": { "move": 1, "scan": 3, "recharge": 1 },
+    "recharge_gain": 40
+  },
+
+  "recharge_stations": [[0, 0], [6, 4]],
+
+  "obstacles": [
+    [3, 3], [3, 4], [3, 5],
+    [5, 7], [6, 7],
+    [7, 3], [7, 4],
+    [2, 6], [8, 6]
+  ],
+
+  "sensor_model": {
+    "signal_decay": 3.0,
+    "strength_noise_std": 0.08,
+    "direction_noise_std_deg": 25.0,
+    "visual_contact_radius": 1.5,
+    "clue_scan_radius": 2,
+    "clue_reliability": 0.97
+  },
+
+  "ground_truth": {
+    "eve_pos": [7, 6],
+    "clues": [
+      {
+        "id": "C1",
+        "pos": [2, 2],
+        "text": "A fresh trail of crushed plant debris: EVE is located south and east of this spot."
+      },
+      {
+        "id": "C2",
+        "pos": [4, 7],
+        "text": "A faint engine whine echoes here: EVE is within 4 cells of this spot."
+      },
+      {
+        "id": "C3",
+        "pos": [8, 1],
+        "text": "Undisturbed dust everywhere: EVE is NOT within 3 cells of this spot."
+      },
+      {
+        "id": "C4",
+        "pos": [5, 4],
+        "text": "Scorch marks on the wall: EVE is located south and east of this spot."
+      }
+    ]
+  }
+}
